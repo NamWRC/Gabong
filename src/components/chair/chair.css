@@ -1,0 +1,16 @@
+.chairlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.chair {
+    background-color: rgb(27, 27, 29, 0.7);
+    margin: 1%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}

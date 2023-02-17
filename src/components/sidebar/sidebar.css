@@ -1,0 +1,64 @@
+.navbar {
+    background-color: #1b1b1d;
+    height: 10vh;
+    width: 98vw;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: 0.4s;
+    /* position: relative; */
+    transition-delay: 0.1s;
+    z-index: 2;
+}
+.navbar .navmenu {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 18px;
+}
+.navmenu .item {
+    width: 40px;
+    height: 40px;
+}
+.navmenu .item-wraper .item i {
+    color: #f45060;
+    width: 100%;
+    /* position: absolute; */
+}
+.navmenu span {
+    letter-spacing: 1px;
+    transition: 0.2s;
+    position: absolute;
+    left: 75px;
+    opacity: 0;
+    font-weight: 400;
+    /* opacity: 0; */
+}
+/* .navbar:hover {
+    width: 190px;
+}
+.navbar:hover span {
+    opacity: 1;
+} */
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-wraper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.tab-checked {
+    color: #f45060;
+}
