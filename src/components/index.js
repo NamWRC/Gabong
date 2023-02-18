@@ -23,16 +23,21 @@ function Mainpage() {
         Table: "",
         Order: "",
     });
+
+    // useEffect(() => {
+    //     console.log(bill);
+    // }, []);
+
     function handleChangePage(page) {
-        console.log(change);
+        // console.log(change);
         setChange(page);
     }
     function handleChair(chair) {
-        console.log(bill);
+        // console.log(bill);
         setBill({ ...bill, Table: chair });
     }
     function handleOrder(order) {
-        console.log(bill);
+        // console.log(bill);
         setBill({ ...bill, Order: order });
     }
     function setPage(change) {
@@ -44,7 +49,7 @@ function Mainpage() {
                 return <Menu handleOrder={handleOrder} bill={bill} />;
 
             case "Cart":
-                return <Cart />;
+                return <Cart bill={bill} />;
 
             case "Search":
                 return <Search />;

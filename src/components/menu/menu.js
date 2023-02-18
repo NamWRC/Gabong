@@ -1,5 +1,5 @@
 import "./menu.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const drinks = [
     { drink: "Trà sữa truyền thống", price: { M: 20, L: 25 } },
     { drink: "Trà sữa tiramisu", price: { M: 20, L: 25 } },
@@ -13,8 +13,11 @@ const drinks = [
     { drink: "Trà sữa hokkaido", price: { M: 20, L: 25 } },
     { drink: "Trà sữa khoai môn", price: { M: 20, L: 25 } },
 ];
-function Menu({ handleOrder }) {
-    const [drinkOrder, setDrinkOrder] = useState([{}]);
+function Menu({ handleOrder, bill }) {
+    const [drinkOrder, setDrinkOrder] = useState([...bill.Order]);
+    useEffect(() => {
+        setDrink(drinkOrder);
+    }, [drinkOrder]);
     function setDrink(drinkOrder) {
         handleOrder(drinkOrder);
     }
@@ -37,7 +40,6 @@ function Menu({ handleOrder }) {
                                             price: drink.price.M,
                                         },
                                     ]);
-                                    setDrink(drinkOrder);
                                 }}
                             >
                                 M:{drink.price.M}k
@@ -53,7 +55,6 @@ function Menu({ handleOrder }) {
                                             price: drink.price.L,
                                         },
                                     ]);
-                                    setDrink(drinkOrder);
                                 }}
                             >
                                 L:{drink.price.L}k
