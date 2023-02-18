@@ -38,38 +38,51 @@ const tables = [
         id: 12,
     },
     {
-        id: 10,
+        id: 13,
     },
     {
-        id: 11,
+        id: 14,
     },
     {
-        id: 12,
+        id: 15,
     },
     {
-        id: 10,
+        id: 16,
     },
     {
-        id: 11,
+        id: 17,
     },
     {
-        id: 12,
+        id: 18,
     },
 ];
-function Chair() {
+function Chair({ handleChair, bill }) {
     // function setChair() {
     //     tables.forEach((table) => {
     //         <div>this is chair no.{table.id}</div>;
     //         console.log("a");
     //     });
     // }
+    function setChair(tableNum) {
+        handleChair(tableNum);
+    }
     return (
-        <div className="chairlist">
-            {tables.map((table) => (
-                <div className="chair">
-                    <h1>{table.id}</h1>
-                </div>
-            ))}
+        <div className="chairChoosing">
+            <div>
+                <h1>Bạn đang ở bàn?</h1>
+            </div>
+            <div className="chairlist">
+                {tables.map((table) => (
+                    <div
+                        className={`chair  ${
+                            table.id === bill.Table ? "chair-checked" : ""
+                        }`}
+                        onClick={() => setChair(table.id)}
+                    >
+                        <h1>{table.id}</h1>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

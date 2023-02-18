@@ -14,3 +14,12 @@
     width: 100px;
     height: 100px;
 }
+.chair-checked {
+    background-color: rgb(218, 68, 83, 0.7);
+}
+.chairChoosing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

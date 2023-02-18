@@ -1,30 +1,33 @@
 .navbar {
-    background-color: #1b1b1d;
-    height: 10vh;
-    width: 98vw;
+    background-color: rgb(27, 27, 29, 0.5);
+    height: 40vh;
+    width: 15vw;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0.7;
     transition: 0.4s;
-    /* position: relative; */
+    position: fixed;
     transition-delay: 0.1s;
     z-index: 2;
+    top: 30%;
+    right: 1%;
+    bottom: 30%;
 }
 .navbar .navmenu {
     padding: 0;
     list-style: none;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    left: 18px;
 }
 .navmenu .item {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 .navmenu .item-wraper .item i {
     color: #f45060;

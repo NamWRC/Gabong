@@ -19,17 +19,29 @@ function Mainpage() {
     //     [change]
     // );
     const [change, setChange] = useState("Chair");
+    const [bill, setBill] = useState({
+        Table: "",
+        Order: "",
+    });
     function handleChangePage(page) {
         console.log(change);
         setChange(page);
     }
+    function handleChair(chair) {
+        console.log(bill);
+        setBill({ ...bill, Table: chair });
+    }
+    function handleOrder(order) {
+        console.log(bill);
+        setBill({ ...bill, Order: order });
+    }
     function setPage(change) {
         switch (change) {
             case "Chair":
-                return <Chair />;
+                return <Chair handleChair={handleChair} bill={bill} />;
 
             case "Menu":
-                return <Menu />;
+                return <Menu handleOrder={handleOrder} bill={bill} />;
 
             case "Cart":
                 return <Cart />;
